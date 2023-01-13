@@ -1,0 +1,204 @@
+<!doctype html>
+<html data-n-head-ssr lang="en">
+
+
+<!-- Mirrored from sui.io/resources-sui/building-capy-prototype-on-sui/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Jan 2023 09:21:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=0">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#6FBCF0">
+  <meta data-rh="true" name="keywords" content="Technology,Blockchain,Move,Sui, Mysten labs">
+  <title>Building the Capy Prototype on Sui</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" property="twitter:card" content="summary"><meta data-n-head="ssr" property="twitter:creator" content="mysten_labs"><meta data-n-head="ssr" name="format-detection" content="telephone=no"><meta data-n-head="ssr" data-hid="description" name="description" content="As programmable objects on the Sui blockchain, Capys demonstrate principles such as asset ownership, transferability, and dynamic object fields. They appear in a player’s wallet along with accessories, including hats, bicycles, and scarves."><meta data-n-head="ssr" data-hid="og:image" property="og:image" content="../../../storage.googleapis.com/sui-cms-content/Capy_Blog_Header_f834f76685/CapyBlogHeader.png"><meta data-n-head="ssr" data-hid="og:title" name="og:title" content="Building the Capy Prototype on Sui"><meta data-n-head="ssr" data-hid="og:description" property="og:description" content="As programmable objects on the Sui blockchain, Capys demonstrate principles such as asset ownership, transferability, and dynamic object fields. They appear in a player’s wallet along with accessories, including hats, bicycles, and scarves."><meta data-n-head="ssr" data-hid="twitter:title" property="twitter:title" content="Building the Capy Prototype on Sui"><meta data-n-head="ssr" data-hid="twitter:image" property="twitter:image" content="../../../storage.googleapis.com/sui-cms-content/Capy_Blog_Header_f834f76685/CapyBlogHeader.png"><meta data-n-head="ssr" data-hid="twitter:description" property="twitter:description" content="As programmable objects on the Sui blockchain, Capys demonstrate principles such as asset ownership, transferability, and dynamic object fields. They appear in a player’s wallet along with accessories, including hats, bicycles, and scarves."><link data-n-head="ssr" rel="icon" type="image/x-icon" href="../../favicon.png"><link data-n-head="ssr" data-hid="canonical" rel="canonical" href="../../index.html"><link rel="preload" href="../../_nuxt/225cf1e.js" as="script"><link rel="preload" href="../../_nuxt/6c30f9a.js" as="script"><link rel="preload" href="../../_nuxt/css/eedb22c.css" as="style"><link rel="preload" href="../../_nuxt/90d6746.js" as="script"><link rel="preload" href="../../_nuxt/css/40e2d79.css" as="style"><link rel="preload" href="../../_nuxt/0128f68.js" as="script"><link rel="preload" href="../../_nuxt/css/52efe12.css" as="style"><link rel="preload" href="../../_nuxt/e213929.js" as="script"><link rel="preload" href="../../_nuxt/css/ad95c26.css" as="style"><link rel="preload" href="../../_nuxt/b792ca8.js" as="script"><link rel="stylesheet" href="../../_nuxt/css/eedb22c.css"><link rel="stylesheet" href="../../_nuxt/css/40e2d79.css"><link rel="stylesheet" href="../../_nuxt/css/52efe12.css"><link rel="stylesheet" href="../../_nuxt/css/ad95c26.css"><link rel="preload" href="../../_nuxt/static/1672857905/resources-sui/building-capy-prototype-on-sui/state.js" as="script"><link rel="preload" href="../../_nuxt/static/1672857905/resources-sui/building-capy-prototype-on-sui/payload.js" as="script"><link rel="preload" href="../../_nuxt/static/1672857905/manifest.js" as="script">
+
+  <link href="https://fonts.googleapis.com/">
+  <link href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <link href="../../assets/css/font-awesome.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <div data-server-rendered="true" id="__suiio"><!----><div id="__layout"><div class="_sui-io sui-blogs"><div class="main-wrapper"><header class="header sui-header"><!----> <div class="sui-mainmenu"><div class="container"><div class="header-navbar"><div class="header-logo"><a href="../../index.html" class="sui-logo sui_selected"><div class="_slogo"></div></a></div> <div class="header-main-nav"><nav class="mainmenu-nav"><div class="d-block"><div class="mobile-nav-header"><button data-bs-dismiss="offcanvas" class="mobile-menu-close"><i class="fas fa-times"></i></button></div></div> <ul class="mainmenu"><li class="menu-item-has-children"><a href="../../index.html#developer" target=""><!---->
+                  Developers</a> <ul class="sui-submenu"><li><a href="https://docs.sui.io/build" target="_blank" class="suiexternal">Getting Started</a></li><li><a href="https://docs.sui.io/" target="_blank" class="suiexternal">Documentation</a></li><li><a href="https://explorer.devnet.sui.io/" target="_blank" class="suiexternal">Explorer</a></li></ul></li><li class="menu-item-has-children"><a href="../../index.html#" target=""><!---->
+                  Ecosystem</a> <ul class="sui-submenu"><li><a href="../../ecosystem/gaming/index.html"><!---->
+                      Gaming</a></li><li><a href="../../ecosystem/finance/index.html"><!---->
+                      Finance</a></li><li><a href="../../resources/index.html"><!---->
+                      Resources</a></li></ul></li><li class="menu-item-has-children"><a href="../../index.html#community" target=""><!---->
+                  Community</a> <ul class="sui-submenu"><li><a href="../../events/index.html"><!---->
+                      Events</a></li><li><a href="https://twitter.com/SuiNetwork" target="_blank" class="suiexternal">Twitter</a></li><li><a href="https://medium.com/mysten-labs" target="_blank" class="suiexternal">Medium</a></li><li><a href="https://discord.gg/sui" target="_blank" class="suiexternal">Discord</a></li><li><a href="https://www.linkedin.com/company/mysten-labs" target="_blank" class="suiexternal">LinkedIn</a></li><li><a href="https://forums.sui.io/" target="_blank" class="suiexternal">Forums</a></li></ul></li><li class="menu-item-has-children"><a href="https://github.com/MystenLabs/sui/blob/main/doc/paper/sui.pdf" target="_blank" class="suiexternal"><!---->
+                  Whitepaper</a> <!----></li><li class="menu-item-has-children"><a href="https://mystenlabs.com/" target="_blank" class="suiexternal"><!---->
+                  About Us</a> <!----></li></ul></nav></div> <div class="header-action"><ul class="list-unstyled"><li class="header-btn"><a href="https://docs.sui.io/" class="sui-btn btn-fill-white">
+                Get Started →</a></li> <li class="mobile-menu-btn sidemenu-btn d-lg-none d-block"><button class="btn-wrap"><span></span> <span></span></button></li></ul></div></div></div></div> <div class="_sui-menu-bg"><section class="sui-m-menu"><div class="row"><div class="col-12"><ul class="m-top-menu"><li class="menu-item-has-children"><a href="#" target="" class="sui-m-icons"><div class="sui-m-icon"><img src="https://storage.googleapis.com/sui-cms-content/sui_dev_icon_d5cdcdbf6e/sui_dev_icon_d5cdcdbf6e.svg"></div> <!---->
+                Developers</a> <ul class="m-sub-menu"><li><a href="https://docs.sui.io/build" target="_blank">Getting Started</a></li><li><a href="https://docs.sui.io/" target="_blank">Documentation</a></li><li><a href="https://explorer.devnet.sui.io/" target="_blank">Explorer</a></li></ul></li><li class="menu-item-has-children"><a href="#" target="" class="sui-m-icons"><div class="sui-m-icon"><img src="https://storage.googleapis.com/sui-cms-content/sui_eco_icon_20f51dfec8/sui_eco_icon_20f51dfec8.svg"></div> <!---->
+                Ecosystem</a> <ul class="m-sub-menu"><li><a href="../../ecosystem/gaming/index.html">
+                    Gaming</a></li><li><a href="../../ecosystem/finance/index.html">
+                    Finance</a></li><li><a href="../../resources/index.html">
+                    Resources</a></li></ul></li><li class="menu-item-has-children"><a href="#" target="" class="sui-m-icons"><div class="sui-m-icon"><img src="https://storage.googleapis.com/sui-cms-content/sui_community_icon_ad857cf0fd/sui_community_icon_ad857cf0fd.svg"></div> <!---->
+                Community</a> <ul class="m-sub-menu"><li><a href="../../events/index.html">
+                    Events</a></li><li><a href="https://twitter.com/SuiNetwork" target="_blank">Twitter</a></li><li><a href="https://medium.com/mysten-labs" target="_blank">Medium</a></li><li><a href="https://discord.gg/sui" target="_blank">Discord</a></li><li><a href="https://www.linkedin.com/company/mysten-labs" target="_blank">LinkedIn</a></li><li><a href="https://forums.sui.io/" target="_blank">Forums</a></li></ul></li><li><a href="https://github.com/MystenLabs/sui/blob/main/doc/paper/sui.pdf" target="_blank" class="suiexternal"><!----> <!---->
+                Whitepaper</a> <!----></li><li><a href="https://mystenlabs.com/" target="_blank" class="suiexternal"><!----> <!---->
+                About Us</a> <!----></li></ul> <div class="_sui-m-btn"><a href="https://docs.sui.io/" target="_self" class="sui-btn btn-fill-primary">Get Started →</a></div></div></div></section></div></header> <main class="_sui-container-l sui_news _sui-other"><section class="container"><section class="blog__meta"><span class="post_item_category"><a href="../../resources/index.html">Resources</a> <i class="fal fa-long-arrow-right"></i> <a href="../index.html" class="sui_selected">Sui</a></span> <span class="post_item_author">Mysten Labs</span> <span class="post_item_date">Thu Nov 03 2022</span></section> <h1 class="title text-left">Building the Capy Prototype on Sui</h1> <section class="banner banner-style-2 sui_banner"><img src="../../../storage.googleapis.com/sui-cms-content/Capy_Blog_Header_f834f76685/CapyBlogHeader.png" alt="Building the Capy Prototype on Sui" class="hero-image"></section> <div class="row row-40"><div class="col-lg-8"><div class="single-blog"><p><a href="https://capy.art/"><u>Sui Capys</u></a>, Mysten Labs’ new prototype, serves as a developer preview and demonstrates key capabilities of the Sui ecosystem. In this decentralized game, players buy, trade, breed, and accessorize Capybaras, the cute South American semi-aquatic rodent. Sui developers can adapt many of the principles and code examples outlined here for their own projects.</p><p>As programmable objects on the Sui blockchain, <a href="https://capy.art/"><u>Capys</u></a> demonstrate principles such as asset ownership, transferability, and <a href="../dynamic-fields-migration-guide/index.html"><u>dynamic object fields</u></a>. They appear in a player’s wallet along with accessories, including hats, bicycles, and scarves. To preview Capys now, head to <a href="https://capy.art/"><u>Capy.art</u></a>.</p><p>Developing Sui Capys using Sui Move required defining the basic modules, creating types, and most importantly, building a registry to record and verify Capys. One unique feature of the prototype is the ability to breed two existing Capys, generating a completely new one based on characteristics of the breeding pair.</p><p>To reiterate, this is a developer preview to showcase unique aspects of Sui and for developers to reference when building projects of their own. Capys are not for sale.</p><p> </p><h4><strong>Disclaimers</strong></h4><ul><li>This dApp is currently considered an early Alpha, so it may be a little rough around the edges.</li><li>The dApp runs on Sui's Devnet which does not have the maturity and stability of a Mainnet.</li><li>There is a <a href="https://github.com/MystenLabs/sui/pull/5652"><u>known Sui Wallet bug</u></a> on transaction history when using Capys, and we'll be shipping a Wallet fix next week to address this.</li><li>We’re planning to update capy.art to the <a href="https://github.com/MystenLabs/sui/tree/main/sdk/wallet-adapter"><u>wallet adapter standard</u></a> in the near future</li><li>Sui Capys is a demo specifically to inspire our developer community. This is <strong>not</strong> an airdrop. Please faucet responsibly – do not spam our Devnet faucet.</li></ul><h4> </h4><h4><strong>Capy Architecture</strong></h4><p>The <a href="https://github.com/MystenLabs/sui/tree/main/sui_programmability/examples/capy"><u>Capy application (Github)</u></a> consists of three modules: <code>capy</code>, <code>capy_items</code>, and <code>capy_market</code>. These modules define the Capys, accessories, and trading mechanism.</p><p>We began the development process by defining specific principles to make the prototype enjoyable and performant. The following principles helped determine the architecture and implementation choices:</p><ul><li>Capys should be freely transferable and usable in any on-chain application.</li><li>Types should contain a minimum amount of data to maintain performance.</li><li>Events can be used to emit static data to be fetched by the indexer.</li><li>The prototype should be extendable so new properties can be added later.</li></ul><p>Developers looking to build games and applications on Sui should begin by defining core concepts such as these, which will guide the development process.</p><h4> </h4><h4><strong>Capy Core</strong></h4><p>The <code>capy</code> module defines the core functionality of Sui Capys: it defines a <code>Capy</code> type as well as granting the publisher with a <code>CapyManagerCap</code>, opening admin functions for the bearer. It defines <code>CapyRegistry</code>, the centralized prototype state, and ways in which it can evolve.</p><h4> </h4><h4><strong>Type: Capy</strong></h4><p><code>Capy</code>, the main type of the application, is an owned object with a defined set of attributes: 32 genes and additional utility information required for prototype features. <code>Capy</code> has two abilities, <code>key</code> and <code>store</code>. The former makes it an own-able asset and the latter allows free transfer and wrapping.</p><ul><li>The <code>gen</code> property marks the Capy’s generation. First Capys have <code>gen 0</code>; newer breeds have their parents’ generation plus one, so <code>gen 1</code>, <code>gen 2</code>, etc.</li><li>The <code>src</code> property enables explorer display of the image. Capys themselves don’t store their full image as it is dynamic and can be changed when new items are added.</li><li>The <code>genes</code> property stores the gene sequence, a 32-byte vector which is used to calculate attributes and selecting genes for a newborn during breeding.</li><li>The <code>item_count</code> is a utility property tracking the number of objects attached to each Capy.</li><li>The <code>attributes</code> property stores human-readable attributes generated during breeding. For example, <code>{ “name": "pattern", "value": "panda" }</code>.</li></ul><p>This set of fields is a minimal requirement for Sui Capys functions, including breeding or adding/removing items.</p><p><img src="../../../storage.googleapis.com/sui-cms-content/Untitled_f52e489afd/Untitled.png" alt="Untitled.png"></p><pre><code class="language-rust">/// The Capy itself. Every Capy has its unique set of genes,
+/// as well as generation and utility information. Ownable, tradeable.
+struct Capy has key, store {
+    id: UID,
+    gen: u64,
+    url: Url,
+    genes: Genes,
+    item_count: u8,
+    attributes: vector&lt;Attribute>,
+}</code></pre><h4> </h4><h4><strong>Type: Capy Registry</strong></h4><p><code>CapyRegistry</code>, a shared object required for breeding, stores the total number of Capys ever born and contains a pseudo-random seed, described below in the Gene science section, used for gene selection during breeding. It contains all attribute definitions assigned to newborns at the breeding stage.</p><p>New attributes can be added to the prototype, as described in the admin features section below.</p><pre><code class="language-rust">/// Every capybara is registered here. CapyRegistry acts as a source of randomness
+/// as well as the storage for the main information about the game state.
+struct CapyRegistry has key {
+    id: UID,
+    capy_born: u64,
+    capy_hash: vector&lt;u8>,
+    genes: vector&lt;GeneDefinition>
+}</code></pre><h4> </h4><h4><strong>Type: CapyManagerCap</strong></h4><p>The <code>CapyManagerCap</code> is a capability sent to the module publisher (the sender of the publishing transaction) when a module publishes. It authorizes admin actions in all of the modules, including <code>capy_items</code> and <code>capy_market</code>.</p><h4> </h4><h4><strong>Initializer</strong></h4><p>Capys are a standalone (non-generic) application, so their main logic can be launched in the module initializer. The <code>init</code> function does two things:</p><ol><li>Creates a <code>CapyManagerCap</code> and sends it to the module publisher.</li><li>Creates and shares a <code>CapyRegistry</code>.</li></ol><h4> </h4><h4><strong>Admin Functions</strong></h4><p>For the application to become playable and have some meaning, admin has to perform a set of actions:</p><ul><li>The <code>add_gene</code> function registers a new <code>GeneDefinition</code> in the <code>CapyRegistry</code>. During breeding, all existing attributes in the registry are assigned to a new Capy. If a new <code>GeneDefinition</code> (Attribute) was added to the prototype, Capys born before this addition won’t get it, but their children will. Each gene definition has a name and a set of selectors which are used to choose the value of each attribute.</li><li>The <code>batch</code> function allows batch creation of Capys with predefined genes. It is used for initialization and in later stages to populate the marketplace with more Capys for new users.</li></ul><h4> </h4><h4><strong>Breeding</strong></h4><p>The main piece of logic which creates unpredictability and helps prototype evolution is the <code>capy::breed</code> function. Any player with two Capys can perform this function. Logic for this function is the following:</p><ol><li>Based on <code>CapyRegistry.capy_hash</code> select parent genes for the new <code>Capy</code>.</li><li>Get list of current <code>GeneDefinitions</code> from the <code>CapyRegistry</code> and set attributes.</li><li>Emit an event with the new Capy’s data.</li><li>Return a new <code>Capy</code> (use <code>breed_and_keep</code> to send to sender).</li></ol><pre><code class="language-rust"> public fun breed(
+    reg: &mut CapyRegistry, c1: &mut Capy, c2: &mut Capy, ctx: &mut TxContext
+): Capy {
+    let id = object::new(ctx);
+
+    // Update capy hash in the registry
+    vec::append(&mut reg.capy_hash, object::uid_to_bytes(&id));
+    reg.capy_hash = hash(reg.capy_hash);
+
+    // compute genes
+    let genes = compute_genes(&ampreg.capy_hash, &c1.genes, &c2.genes, GENES);
+    let gen = math::max(c1.gen, c2.gen) + 1;
+    let attributes = get_attributes(&ampreg.genes, &genes);
+    let sender = tx_context::sender(ctx);
+
+    emit(CapyBorn { /* ... */ }); 
+
+    // Send newborn to parents.
+    Capy {
+        url: img_url(&id),
+        id,
+        gen,
+        genes,
+        attributes,
+        item_count: 0,
+    }
+}</code></pre><h4> </h4><h4><strong>Gene Science</strong></h4><p>Before we get to the most interesting part of the application, we must note that this solution does not provide absolute unpredictability, and therefore should not be used for applications with high stakes. But it does create some degree of randomness by turning user input into a pseudo-random modifier.</p><p><img src="../../../storage.googleapis.com/sui-cms-content/Untitled_1_d1f3806d98/Untitled%20(1).png" alt="Untitled (1).png"></p><p>A really fun and unique feature of this prototype is the ability to <code>breed</code> two existing Capys to generate a third. The new Capy inherits characteristics of its parents.</p><p>The breed function takes two parent Capys and computes genes for the newborn. For this action to be fair and random, we need to have a selection algorithm and a seed. <code>CapyRegistry</code> provides the seed (stored as <code>capy_hash</code>) and is updated after each breed. The algorithm is the following:</p><p><img src="../../../storage.googleapis.com/sui-cms-content/83_C758_FA_D971_4_CAB_BE_6_D_346_DDA_6_B9_C5_F_1f14091b68/83C758FA-D971-4CAB-BE6D-346DDA6B9C5F.jpeg" alt="83C758FA-D971-4CAB-BE6D-346DDA6B9C5F.jpeg"></p><ol><li>Use hashing function (<code>sha3_256</code>) three times with salt to generate three vectors of 32 bytes (marked as A, B, and C) derived from the <code>capy_hash</code>.</li><li>Use the first vector (A) for parent gene selection. If the value of the Nth byte is more than 126, select the first parent’s gene. Otherwise, select the second parent’s gene. As shown in the diagram above, the first gene will be P2, second P1, third P2, and fourth P1 again (up to N=32).</li><li>The second vector (B) defines a chance of mutation. If the value in position N is more than 250, use the same position in the third vector (C) to select a value for mutation. In this example, the third gene will mutate and its value will be 42.</li></ol><pre><code class="language-rust">/// Computes genes for the newborn based on the 'random' seed r0, and parents' genes.
+///
+/// The `max` parameter affects how many genes should be changed.
+/// For example, if the number of genes is 32 but only 4 Attributes defined in the
+/// registry, the `max` should be set to 4. Remainder genes should not mutate.
+fun compute_genes(r0: &vector&lt;u8>, g1: &Genes, g2: &Genes, max: u64): Genes {
+    let i = 0;
+
+    let s1 = &g1.sequence;
+    let s2 = &g2.sequence;
+    let s3 = vec::empty();
+
+    let r1 = derive(r0, 1); // for parent gene selection
+    let r2 = derive(r0, 2); // chance of random mutation
+    let r3 = derive(r0, 3); // value selector for random mutation
+
+    while (i &lt; max) {
+        let rng = *vec::borrow(&r1, i);
+        let gene = if (lor(rng, 127)) {
+            *vec::borrow(s1, i)
+        } else {
+            *vec::borrow(s2, i)
+        };
+
+        // There's a tiny chance that a mutation will happen.
+        if (lor(*vec::borrow(&r2, i), MUTATION_CHANCE)) {
+            gene = *vec::borrow(&r3, i);
+        };
+
+        vec::push_back(&mut s3, gene);
+        i = i + 1;
+    };
+
+    Genes { sequence: s3 }
+}</code></pre><h4> </h4><h4><strong>Capy Items</strong></h4><p>This drastically simple module defines wearable items which can be added to each Capy, and how we implement the frontend display. Items can only be added by the Capy Admin, as it requires authorization with a <code>CapyManagerCap</code>.</p><p><img src="../../../storage.googleapis.com/sui-cms-content/Untitled_2_ff646e66a8/Untitled%20(2).png" alt="Untitled (2).png"></p><pre><code class="language-rust">/// Wearable item. Has special display in capy.art application
+struct CapyItem has key, store {
+  id: UID,
+  url: Url,
+  type: String,
+  name: String,
+}</code></pre><h4> </h4><h4><strong>Managing Items</strong></h4><p>Adding and removing accessories to Capys makes use of <a href="../dynamic-fields-migration-guide/index.html"><u>dynamic object fields</u></a>, a more efficient and user-friendly replacement for parent-child objects in Sui. Dynamic Fields allow arbitrary names and can be added and removed on-the-fly.</p><p><br>The following code adds an item to a Capy:</p><pre><code class="language-rust">entry fun add_item&lt;T: key + store>(capy: &mut Capy, item: T) {
+    emit(ItemAdded&lt;T> {
+        capy_id: object::id(capy),
+        item_id: object::id(&item)
+    });
+
+    dof::add(&mut capy.id, object::id(&item), item);
+}</code></pre><h4> </h4><h4><strong>Capy Market</strong></h4><p>To acquire and sell <code>Capy</code>s and <code>CapyItems</code>, we created the Capy Market. This module makes use of dynamic object fields and locks Items to be acquirable after paying their <code>price</code>. In this marketplace architecture, one marketplace object exists per one item type (<code>CapyMarket&lt;Capy></code> sells <code>Capy</code>s while a different object, <code>CapyMarket&lt;CapyItem></code>, sells Capy accessories), listings are attached to the marketplace as dynamic object fields, and listed objects are attached to Listings.</p><p>                              +--> Listing --> T<br>CapyMarket&lt;T>  +--> Listing --> T<br>                              +--> Listing --> T</p><p> </p><p><strong>Marketplace and the List Function</strong></p><p>Each Marketplace instance serves only one type. In this application, one instance of Marketplace exists for the <code>Capy</code> type and another for the <code>CapyItem</code> type.</p><pre><code class="language-rust">/// A generic marketplace for anything. T marks the type for Listings.
+struct CapyMarket&lt;phantom T: key + store> has key { id: UID }
+
+/// A listing for the marketplace. Contains the price and owner of the Listing.
+struct Listing&lt;phantom T: key + store> has key, store {
+    id: UID,
+    price: u64,
+    owner: address
+}</code></pre><p>The <code>List</code> function makes use of <a href="../dynamic-fields-migration-guide/index.html"><u>Dynamic Fields</u></a>. It makes a listed Item a field of a <code>Listing</code> and then makes <code>Listing</code> a field of <code>CapyMarket</code>.</p><pre><code class="language-rust">/// List a new item on the `CapyMarket`.
+public entry fun list&lt;T: key + store>(
+    market: &mut CapyMarket&lt;T>,
+    item: T,
+    price: u64,
+    ctx: &mut TxContext
+) {
+    let id = object::new(ctx);
+    let item_id = object::id(&item);
+    let owner = tx_context::sender(ctx);
+
+    emit(ItemListed&lt;T> { /* ... */ });
+
+    // First attach Item to the Listing with a boolean `true` value;
+    // Then attach listing to the marketplace through `item.id`;
+    dynamic_object_field::add(&mut id, true, item);
+    dynamic_object_field::add(&mut market.id, item_id, Listing&lt;T> { 
+id, price, owner 
+});
+}</code></pre><h4> </h4><h4><strong>Capy Inspiration</strong></h4><p>We created the Capy prototype to show off some key Sui features and inspire developers in their own projects. Capys leverage Sui’s object-oriented nature to allow portable accessories that players can trade and buy, and the generation of new Capys based on parental attributes. We designed the prototype to be infinitely extendable so that it will delight users and developers alike.</p><p><span style="background-color:transparent;color:#000;font-family:Arial">We hope the examples and code here prove useful to Sui developers. A few implementations that should stand out include the Capy Market, Accessories, and Breeding. The Capy Market serves as a model for any trading or store mechanism. Accessories show a good use of </span><a href="../dynamic-fields-migration-guide/index.html"><span style="background-color:transparent;color:#000;font-family:Arial"><u>Dynamic Fields</u></span></a><span style="background-color:transparent;color:#000;font-family:Arial">. Breeding offers a unique means of automatically generating new objects with infinite applications.</span></p><p><span style="background-color:transparent;color:#000;font-family:Arial">Have fun and happy developing!</span></p><h4><strong>Learn more about Sui</strong></h4><ul><li><a href="../../indexd527.html?utm_source=medium&amp;utm_medium=social&amp;utm_campaign=devnet"><u>Sui Website</u></a></li><li><a href="https://docs.sui.io/?utm_source=medium&amp;utm_medium=social&amp;utm_campaign=devnet"><u>Sui Developer Portal</u></a></li><li><a href="https://docs.sui.io/build/move?utm_source=medium&amp;utm_medium=social&amp;utm_campaign=devnet"><u>Move Programming Language</u></a></li><li><a href="https://github.com/MystenLabs/sui/blob/main/doc/paper/sui.pdf"><u>Sui Whitepaper</u></a></li><li><a href="https://discord.gg/sui"><u>Community Forums</u></a></li><li><a href="https://github.com/MystenLabs/sui/tree/main/sui_programmability/examples/capy"><u>Sui Capys Repo</u></a></li></ul><h4 style="margin-left:0"><strong>Build with us!</strong></h4><p style="margin-left:0">We’re excited about how the future unfolds and invite creators and builders to <a href="https://docs.sui.io/build?utm_source=medium&amp;utm_medium=social&amp;utm_campaign=devnet"><u>join us</u></a>. </p></div></div> <div class="col-lg-4"><section class="_sui-categories sui-sidebar"><section class="widget widget-categories _t-content"><h6 class="_sui_side_menu_header">Resource</h6> <ul id="toc-container" class="_sui_list_cta"><li class="_light _in-page-menu"><a href="../../resources-narwhal-tusk/index.html" class="scrollactive-item">Narwhal & Tusk</a></li><li class="_light _in-page-menu"><a href="../../resources-move/index.html" class="scrollactive-item">Move</a></li><li class="_light _in-page-menu"><a href="../../resources-tokenomics/index.html" class="scrollactive-item">Tokenomics</a></li><li class="_light _in-page-menu"><a href="../index.html" class="scrollactive-item sui_selected">Sui</a></li></ul></section></section></div></div></section> <section class="sui_blog_posts section section-padding-2"><div class="container"><section class="post_header"><h3 class="title text-left">
+        Read Next
+      </h3></section> <section class="post_content"><div class="_resource_post"><a href="../wishing-you-a-capy-holidays/index.html" class="post"><div class="post_item"><div class="post_item_img"><img src="https://storage.googleapis.com/sui-cms-content/Capy_Holidays_TN_4297429934/Capy_Holidays_TN_4297429934.svg" alt=""></div> <div class="post_item_content"><div class="category_name">Sui</div> <h4 class="post_item_title">Wishing You a Capy Holidays</h4> <div class="post_item_meta"><span class="post_item_author">Mysten Labs .</span> <!----> <span class="post_item_date">2022-12-19 </span></div></div></div></a></div><div class="_resource_post"><a href="../sui-token-community-access-program-faq/index.html" class="post"><div class="post_item"><div class="post_item_img"><img src="../../../storage.googleapis.com/sui-cms-content/SUI_Cap_FAQ_TN_606c93355d/SUI_Cap_FAQ%20TN.png" alt=""></div> <div class="post_item_content"><div class="category_name">Sui</div> <h4 class="post_item_title">SUI Token Community Access Program: FAQ</h4> <div class="post_item_meta"><span class="post_item_author">Sui Foundation .</span> <!----> <span class="post_item_date">2022-12-19 </span></div></div></div></a></div><div class="_resource_post"><a href="../2023-sui-builder-house-world-tour/index.html" class="post"><div class="post_item"><div class="post_item_img"><img src="https://storage.googleapis.com/sui-cms-content/Announcing_2023_Sui_Builder_House_World_Tour_TN_1_f2bc399649/Announcing_2023_Sui_Builder_House_World_Tour_TN_1_f2bc399649.svg" alt=""></div> <div class="post_item_content"><div class="category_name">Sui</div> <h4 class="post_item_title">Announcing the 2023 Sui Builder House World Tour</h4> <div class="post_item_meta"><span class="post_item_author">Sui Foundation .</span> <!----> <span class="post_item_date">2022-12-15 </span></div></div></div></a></div></section> <!----></div></section></main> <footer class="footer-area"><div class="container _sui-footer-container"><div class="footer-top"></div> <div class="footer-main"><div class="row"><div class="col-xl-4 col-lg-4"><div class="footer-widget _sui-footer-logo border-end1"><img src="../../_nuxt/img/sui-logo.8d3c44e.svg" alt="Sui logo" class="light-version-logo"></div></div> <div class="col-xl-8 col-lg-8"><div class="row"><div class="col-lg-3 col-md-3 col-6"><div class="footer-widget"><h6 class="widget-title">
+                   Build
+                </h6> <div class="footer-menu-link"><ul class="list-unstyled"><li><a href="https://docs.sui.io/" target="_blank">
+                        Docs
+                      </a></li><li><a href="https://github.com/MystenLabs" target="_blank">
+                        GitHub
+                      </a></li><li><a href="https://discord.gg/sui" target="_blank">
+                        Chat on Discord
+                      </a></li></ul></div></div></div><div class="col-lg-3 col-md-3 col-6"><div class="footer-widget"><h6 class="widget-title">
+                  Join
+                </h6> <div class="footer-menu-link"><ul class="list-unstyled"><li><a href="https://mystenlabs.com/" target="_blank">
+                        Mysten Labs
+                      </a></li><li><a href="https://jobs.ashbyhq.com/mystenlabs" target="_blank">
+                        Careers
+                      </a></li></ul></div></div></div><div class="col-lg-3 col-md-3 col-6"><div class="footer-widget"><h6 class="widget-title">
+                  Read
+                </h6> <div class="footer-menu-link"><ul class="list-unstyled"><li><a href="https://medium.com/mysten-labs" target="_blank">
+                        Blog
+                      </a></li><li><a href="https://github.com/MystenLabs/sui/blob/main/doc/paper/sui.pdf" target="_blank">
+                        Whitepaper
+                      </a></li></ul></div></div></div><div class="col-lg-3 col-md-3 col-6"><div class="footer-widget"><h6 class="widget-title">
+                  Sui
+                </h6> <div class="footer-menu-link"><ul class="list-unstyled"><li><a href="https://docs.sui.io/contribute" target="_blank">
+                        Break Sui
+                      </a></li><li><a href="https://mystenlabs.com/#community" target="_blank">
+                        Press
+                      </a></li></ul></div></div></div></div></div></div></div> <div class="footer-bottom"><div class="row"><div class="col-md-4"><div class="_sui_footer_social"><div class="_sui-footer-logoM"><div class="footer-widget"><img src="../../_nuxt/img/sui-logo.8d3c44e.svg" alt="Sui logo" class="light-version-logo"></div></div> <div class="footer-social-link"><ul class="list-unstyled"><li><a href="https://twitter.com/SuiNetwork" target="_blank" aria-label="twitter"><img src="https://storage.googleapis.com/sui-cms-content/twitter_260be14bb1/twitter_260be14bb1.svg" class="iconlinks"></a></li><li><a href="https://medium.com/mysten-labs" target="_blank" aria-label="Medium"><img src="https://storage.googleapis.com/sui-cms-content/medium_4cf295c1e0/medium_4cf295c1e0.svg" class="iconlinks"></a></li><li><a href="https://discord.gg/sui" target="_blank" aria-label="discord"><img src="https://storage.googleapis.com/sui-cms-content/discord_3286014c1d/discord_3286014c1d.svg" class="iconlinks"></a></li></ul></div></div></div> <div class="col-md-5 order-lg-last"><div class="footer-bottom-link"><ul class="list-unstyled"><li><a href="../../policy/index.html">Privacy Policy</a></li> <li><a href="../../terms/index.html">Terms of Service</a></li></ul></div></div> <div class="col-md-3"><div class="footer-copyright"><span class="copyright-text">©2022 Copyright Sui. All rights reserved.</span></div></div></div></div></div></footer></div></div></div></div><script defer src="../../_nuxt/static/1672857905/resources-sui/building-capy-prototype-on-sui/state.js"></script><script src="../../_nuxt/225cf1e.js" defer></script><script src="../../_nuxt/e213929.js" defer></script><script src="../../_nuxt/b792ca8.js" defer></script><script src="../../_nuxt/6c30f9a.js" defer></script><script src="../../_nuxt/90d6746.js" defer></script><script src="../../_nuxt/0128f68.js" defer></script>
+  <!--EXTRA JS FILES-->
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKP53WJMB0"></script>
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-YKP53WJMB0")</script>
+
+  <script crossorigin="anonymous" src="../../../polyfill.io/v3/polyfill.mine77a.js?features=WeakMap,IntersectionObserver"></script>
+</body>
+
+
+<!-- Mirrored from sui.io/resources-sui/building-capy-prototype-on-sui/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Jan 2023 09:21:52 GMT -->
+</html>
